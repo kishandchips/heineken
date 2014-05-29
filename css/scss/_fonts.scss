@@ -1,0 +1,32 @@
+@mixin arial {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: 'heineken_corebold';
+    src: url('fonts/heineken_core-bold-webfont.eot');
+    src: url('fonts/heineken_core-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/heineken_core-bold-webfont.woff') format('woff'),
+         url('fonts/heineken_core-bold-webfont.ttf') format('truetype'),
+         url('fonts/heineken_core-bold-webfont.svg#heineken_corebold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@mixin hkncore-bold {
+	font-family: 'heineken_corebold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+.arial {
+	@include arial;
+}
+
+.hkncore {
+	@include hkncore-bold;
+}
+
+

@@ -1,0 +1,81 @@
+/* =============================================================================
+   Buttons
+   ========================================================================== */
+
+.buttongroup {
+	@extend .clearfix;
+	text-align: center;
+
+	a {
+		padding: 10px 33px;
+		@include vertical-gradient(#FFF, #f2f2f3);
+		border: 1px solid #adadad;
+		@include font-size(14);
+		@include hkncore-bold;
+		@include box-shadow(0 1px 1px #cacaca);
+		@include inline-block;
+		line-height: 24px;
+
+		@include device-width(4) {
+			@include font-size(0);
+		}
+
+
+		&:before {
+			@extend [class*="icon-"];
+			margin-right: 5px;
+			@include font-size(20);
+			float:left;
+		}		
+
+		&:first-child {
+			@include border_radius_left(6px);
+		}
+
+		&:last-child {
+			@include border_radius_right(6px);
+		}
+
+		&.active, &:hover {
+			color: #FFF;
+			background: #376092;
+			@include box-shadow(none);
+		}
+
+		&.dashboard {
+			&:before {
+				@extend .icon-home:before;
+			}			
+		}
+
+		&.documents {
+			&:before {
+				@extend .icon-documents:before;
+			}				
+		}
+
+
+	}
+}
+
+.upload-btn {
+	background: #326195;
+	@include font-size(13);
+	color: #FFF;
+	@include inline-block;
+	padding: 5px 10px;
+	@include border-radius(4px);
+	margin: 8px 22px;
+	@include box-shadow(0 2px 1px #cacaca);
+
+	&:before {
+		@extend [class*="icon-"];
+		@extend .icon-upload:before;
+		margin-right: 11px;
+	}
+
+	&:hover {
+		color: #FFF;
+		background: #20436f;
+	}
+}
